@@ -1,0 +1,21 @@
+{
+    "name": "シンプルな電卓 PWA",
+    "short_name": "電卓PWA",
+    "description": "オフラインでも使えるシンプルな電卓アプリ",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#282c34",
+    "theme_color": "#282c34",
+    "icons": [
+        {
+            "src": "icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
