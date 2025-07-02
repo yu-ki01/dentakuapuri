@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #282c34;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 320px; /* 電卓全体の幅 */
+    padding: 20px;
+}
+
+.display {
+    background-color: #4a4f57;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    min-height: 70px; /* 表示領域の最小高さ */
+}
+
+.display #expression {
+    font-size: 1.6em; /* 式のフォントサイズ */
+    color: #cccccc;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 1.2em; /* 高さを固定して安定させる */
+}
+
+.display #result {
+    font-size: 3.5em; /* 結果のフォントサイズ */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px; /* ボタン間の隙間 */
+}
+
+.button {
+    background-color: #61afef; /* 数字ボタンのデフォルト色 */
+    color: #ffffff;
+    border: none;
+    padding: 25px 15px; /* 上下のパディングを増やしてボタンを高く */
+    font-size: 1.8em; /* ボタンの文字サイズ */
+    border-radius: 8px; /* 角を丸く */
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ボタンに影 */
+}
+
+.button:hover {
+    background-color: #52a0da;
+    transform: translateY(-2px); /* ホバー時に少し上に移動 */
+}
+
+.button:active {
+    transform: translateY(0); /* クリック時に元の位置に戻す */
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); /* クリック時の影を小さく */
+}
+
+/* 特殊ボタンの色 */
+.button.clear {
+    background-color: #e06c75; /* クリアボタンの色 */
+}
+
+.button.clear:hover {
+    background-color: #c95b64;
+}
+
+.button.operator {
+    background-color: #c678dd; /* 演算子ボタンの色 */
+}
+
+.button.operator:hover {
+    background-color: #b36ac8;
+}
+
+.button.equals {
+    background-color: #98c379; /* イコールボタンの色 */
+    grid-column: span 2; /* イコールボタンを2列に */
+}
+
+.button.equals:hover {
+    background-color: #84af65;
+}
+
+.button.zero {
+    grid-column: span 2; /* 0ボタンを2列に */
+}
